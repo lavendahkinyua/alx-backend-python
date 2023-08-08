@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Type-annotated func floor takes float n as argument,returns the floor of the float."""
+"""Type-annotated func floor takes float n as arg,return the floor of the float."""
 
 
 def floor(n: float) -> int:
