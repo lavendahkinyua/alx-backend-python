@@ -3,7 +3,7 @@
 
 
 import asyncio
-import random
+# import random
 generator = __import__('0-async_generator').async_generator
 
 
