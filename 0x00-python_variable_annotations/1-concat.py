@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Type-annotated func concat takes str1 and str2 as args,returns concatenated string."""
+"""Type-annotated func concat takes str1 and str2 as args."""
 
 
 def concat(str1: str, str2: str) -> str:
