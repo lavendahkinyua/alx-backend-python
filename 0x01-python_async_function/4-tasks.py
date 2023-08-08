@@ -7,20 +7,19 @@ task_wait_random is being called.
 
 import asyncio
 from typing import List
-task_wait_random = __import__('3-tasks').task_wait_random
+wait_random = __import__('3-tasks.py').task_wait_random
 
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
-    """Spawn wait_random n times"""
-    tasks = []
-    delays = []
+    """Return list of delays in ascending order."""
+    temp = 0
+    waiting = await asyncio.gather(*(wait_random(max_delay) for i in range(n)))
 
-    for i in range(n):
-        task = task_wait_random(max_delay)
-        tasks.append(task)
-
-    for task in asyncio.as_completed((tasks)):
-        delay = await task
-        delays.append(delay)
-
-    return delays
+    
+    for i in range(0, len(waiting)):
+        for j in range(i + 1, len(waiting)):
+            if (waiting[i] > waiting[j]):
+                temp = waiting[i]
+                waiting[i] = waiting[j]
+                waiting[j] = temp
+    return waiting
