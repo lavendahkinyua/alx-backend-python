@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Type-annotated func to_str takes float n as arg,returns the string rep of the float."""
+"""Type-annotated func to_str takes float n as arg,returns the string rep of n."""
 
 
 def to_str(n: float) -> str:
