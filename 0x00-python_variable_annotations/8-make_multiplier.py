@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Type-annotated function make_multiplier that takes a float multiplier as arg"""
+"""Type-annotated func make_multiplier that takes a float multiplier as arg"""
 
 
 from typing import Callable
